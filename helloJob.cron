@@ -1,0 +1,1 @@
+* * * * * echo "TEST 2" >> /cron_demo/log_file.txt

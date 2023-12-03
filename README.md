@@ -67,7 +67,18 @@ Same goes for stopping jobs as well. If we use root previlages than system level
 3. We can also edit ***/etc/crontab*** file and add CRON expresions there. There is no need to use ```crontab``` command in this case.
 
 
+## Problem faced
+When I created docker container and tried to test. The logs were stored in 'log_file.txt'$\r file instead of log_file.txt. This was happening because I created the job file in windows operating system and in docker I was running in Ubuntu (Unix). Hard to believe!! But true.
+
+When we create files in windows, the end of the line is encoded with \n, \r or line feed. But in linux the end of the line is always represented by \n. So, when moving files from windows to unix, we need to format it to match to linux. Else, linux sees this file as corrupt.
+
+For more information please refer this: https://www.geeksforgeeks.org/dos2unix-unix2dos-commands/
+
+Hurray!!! I found better solution. In code editers we can set how the new line/return is encoded. For example in visual studio code, in bottom right corner we have option to switch between CLRF(windows) and LF(Linux). We can set it to LF, then no need to handle this at the time of file movement.
+
+
 ## Resources
 1. About CRON - https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-ubuntu-1804#managing-crontabs
 2. CRON with Docker - https://devtron.ai/blog/running-a-cronjob-inside-docker-container-in-5-steps/
 3. WIKI - https://en.wikipedia.org/wiki/Cron
+4. Install docker in Ubuntu - https://docs.docker.com/engine/install/ubuntu/
