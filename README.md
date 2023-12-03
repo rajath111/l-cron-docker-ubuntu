@@ -42,7 +42,7 @@ Please refer to this resource for more info on CRON scheduling https://en.wikipe
 
 The above CRON job file contains two jobs.
 1. First job runs every minute and logs 'TEST 2' in log file.
-2. Second job runs every 5 minutes on Mondays and logs 'TEST 5' in log file.
+2. Second job runs 5th minute of every hour on Mondays and logs 'TEST 5' in log file.
 
 ## Enable/Configure to run CRON job
 We can manage CRON jobs using ```crontab``` utility installed when we install cron. 
