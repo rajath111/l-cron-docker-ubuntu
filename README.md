@@ -75,6 +75,7 @@ When we create files in windows, the end of the line is encoded with \n, \r or l
 For more information please refer this: https://www.geeksforgeeks.org/dos2unix-unix2dos-commands/
 
 Hurray!!! I found better solution. In code editers we can set how the new line/return is encoded. For example in visual studio code, in bottom right corner we have option to switch between CLRF(windows) and LF(Linux). We can set it to LF, then no need to handle this at the time of file movement.
+![image](https://github.com/rajath111/l-cron-docker-ubuntu/assets/68014909/32ab5008-ea38-4df4-b576-f99d366012e5)
 
 
 ## Resources
